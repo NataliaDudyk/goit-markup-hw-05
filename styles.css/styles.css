@@ -84,6 +84,9 @@ p {
 
 a {
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 ul {
   list-style: none;
@@ -114,6 +117,10 @@ button {
   border-radius: 4px 4px 4px 4px;
   border: 0px;
   padding: 6px 22px 6px 22px;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
 }
 button:hover,
 button:focus,
@@ -271,25 +278,24 @@ nav a:not(.logo).active,
 /* hero styles */
 
 .overlay {
- max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
  height: 600px;
- margin-left: auto;
- margin-right: auto;
- outline: 1px solid black;
- background-color: var(--hero-background);
- background-image: linear-gradient(
-   to right, 
-  rgba(47, 48, 58, 0.4),
-  rgba(47, 48, 58, 0.4)
- ), 
- url(../images/icons/hero.jpg),
- url(../images/icons/img_overlay.jpg); 
+  background-color: var(--hero-background);
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
 }
 
 .hero {
+  background-image: linear-gradient(
+   to right, 
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)
+ ), 
+ url(../images/icons/hero.jpg),
+ url(../images/icons/img_overlay.jpg); 
   margin: 0 auto;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -356,6 +362,7 @@ nav a:not(.logo).active,
   min-width: 528px;
   border-radius: 4px;
   background-color: #ffffff;
+  
 }
 .modal-style {
   width: 30px;
@@ -370,6 +377,9 @@ nav a:not(.logo).active,
 
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
@@ -504,11 +514,6 @@ nav a:not(.logo).active,
   margin-top: 16px;
 }
 
-.social-links li {
-  margin: 0;
-  padding: 0px;
-  border: 0px;
-}
 .social-links li:not(:last-child) {
   margin-right: 10px;
 }
@@ -522,6 +527,9 @@ nav a:not(.logo).active,
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-button:hover,
@@ -608,7 +616,6 @@ border-radius: 4px;
 }
 .directions-container a {
   transition-property: box-shadow;
-
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 }
@@ -691,6 +698,9 @@ border-radius: 4px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition-property: border-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .partners-links a:hover,
@@ -797,11 +807,13 @@ footer a {
 .footer-social-links {
   display: flex;
   justify-content: space-between;
-  margin: 0px;
 }
 
+.footer-social-links li {
+  width: 44px;
+  height: 44px;
+}
 .footer-social-links a {
-  margin: 0px;
   background: rgba(255, 255, 255, 0.1);
 }
 
